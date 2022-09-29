@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/constant.dart';
 
-import 'login_screen.dart';
-
-void main() {
-  runApp(InitialScreen());
+void main(List<String> args) {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: HomePage(),
+  ));
 }
 
-class InitialScreen extends StatelessWidget {
-  const InitialScreen({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LoginScreen(),
-      title: appName,
-      debugShowCheckedModeBanner: false,
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          height: MediaQuery.of(context).size.height,
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+          child: Column(),
+        ),
+      ),
     );
   }
 }
